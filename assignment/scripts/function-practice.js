@@ -87,7 +87,7 @@ return false;
   }
 
 
-console.log(find([1, 2, 3, 4, 5]));
+console.log(find( 10, [1, 2, 3, 4, 5]));
 
 
 
