@@ -30,7 +30,7 @@ function addNumbers(firstNumber, secondNumber) {
 
 addNumbers(50, 125);
  console.log(addNumbers(50, 125));
-
+ console.log(addNumbers(276, 567));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(a, b, c) {
@@ -39,6 +39,7 @@ function multiplyThree(a, b, c) {
 
 multiplyThree(5, 7, 9);
  console.log(multiplyThree(5, 7, 9));
+ console.log(multiplyThree(20, 5, 13));
 
 
 // 5. Function that will return true if a number is positive, 
@@ -63,7 +64,7 @@ function getLast(array) {
  if (array.length === 0) {
   return undefined;
   } else {
-    return array[array.length - 1]
+     return array[array.length - 1];
   }
  }
 
@@ -80,16 +81,14 @@ function find(value, array) {
   
  for(let i = 0; i < array.length; i++) {
   if(value === array[i]) {
-    return true;
+   return true;
   }    
 }
 return false;
-  }
+}
 
-
-console.log(find( 10, [1, 2, 3, 4, 5]));
-
-
+console.log(find(5, [1, 2, 3, 4, 5, 6, 7,]));
+console.log(find(12, [1, 2, 3, 4, 5, 6, 7]));
 
 // ----------------------
 // Stretch Goals
@@ -97,17 +96,29 @@ console.log(find( 10, [1, 2, 3, 4, 5]));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
+ return letter.charAt(0) === string; {
 
-}
+ } 
+ return false;
+ }
 
-
+ 
+console.log(isFirstLetter('a', 'gravy'));
+console.log(isFirstLetter('b', 'banana'));
 // 9. Function to return the sum of all numbers in an array
+
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
 
+  for(let i = 0; i < array.length; i++) {
+  sum += array[i];
+} 
   // TODO: return the sum
+  return sum;
 }
+
+console.log(sumAll([45, 66, 77, 102, 2]));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
